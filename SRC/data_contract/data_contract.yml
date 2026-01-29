@@ -1,0 +1,32 @@
+version: 1.0
+dataset: silver_clientes
+description: Dataset tratado para consumo analítico e ML
+
+columns:
+  - name: id
+    type: int
+    nullable: false
+    unique: true
+    description: Identificador único do cliente
+
+  - name: nome
+    type: string
+    nullable: false
+
+  - name: email
+    type: string
+    nullable: true
+    regex: ".+@.+\\..+"
+
+  - name: data_nascimento
+    type: date
+    nullable: true
+
+  - name: cidade
+    type: string
+    nullable: false
+
+  - name: valor_compra
+    type: float
+    nullable: true
+    min: 0
