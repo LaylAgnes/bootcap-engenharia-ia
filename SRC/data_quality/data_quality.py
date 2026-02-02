@@ -58,7 +58,7 @@ def run_quality_checks():
     results = ge_df.validate()
 
     if not results["success"]:
-        raise ValueError("❌ Falha nos testes de qualidade de dados")
+        raise ValueError("Falha nos testes de qualidade de dados")
 
     print("✅ Testes de qualidade passaram com sucesso")
 
