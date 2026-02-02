@@ -1,5 +1,12 @@
 import yaml
 
+TYPE_MAPPING = {
+    "int": "int",
+    "float": "double",
+    "string": "string",
+    "boolean": "boolean"
+}
+
 def load_contract(path):
     with open(path) as f:
         return yaml.safe_load(f)
